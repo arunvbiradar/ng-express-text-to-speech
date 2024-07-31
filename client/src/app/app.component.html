@@ -1,0 +1,17 @@
+<h1>Patra Vani</h1>
+
+<p>{{ statusMessage }}</p>
+
+<input #fileInput type="file" (change)="onFileSelected($event)" />
+<button (click)="uploadFile()">Upload</button>
+<br />
+<br />
+<br />
+<audio #audioPlayer controls *ngIf="audioSrc">
+  <source [src]="audioSrc" type="audio/mp3" />
+  Your browser does not support the audio element.
+</audio>
+
+<div class="text-container">
+  {{ text }}
+</div>
